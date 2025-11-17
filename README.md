@@ -58,3 +58,37 @@
 
 - Semua player terdeteksi cheat akan diban otomatis, log dikirim ke Discord.
 - Admin/console dapat unban menggunakan:
+/unbanatc steam:<steam_id>
+
+text
+Contoh: `/unbanatc steam:1100001122334455`
+
+---
+
+## 📝 Table Structure (bans)
+Pastikan database memiliki tabel bans seperti berikut:
+| Kolom     | Type      | Keterangan    |
+|-----------|-----------|--------------|
+| id        | int       | PRIMARY KEY  |
+| name      | varchar   | Nama Player  |
+| steam     | varchar   | Steam ID     |
+| license   | varchar   | FiveM License|
+| discord   | varchar   | Discord ID   |
+| ip        | varchar   | Alamat IP    |
+| reason    | text      | Alasan Ban   |
+| bannedby  | varchar   | Pengban      |
+| expire    | int/bool  | 0 = Permanent|
+| bannedon  | int       | Timestamp    |
+
+---
+
+## 💡 Credits
+Developed by **Natakenshi Developer**  
+Open for contribution & feedback via Discord: [discord.gg/natakenshidevelopment](https://discord.gg/natakenshidevelopment)
+
+## 📜 License
+Bebas digunakan pribadi, dilarang diperjualbelikan tanpa izin developer asli.
+
+---
+
+Enjoy! 🚀
